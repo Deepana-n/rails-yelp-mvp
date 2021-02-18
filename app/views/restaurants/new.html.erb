@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
-  <%= f.input :category %>
+  <%= f.input :name, :collection => %w(chinese italian japanese french belgian) %>
 
   <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>

@@ -1,11 +1,16 @@
 <div class="container">
-<h2><%= @restaurant.name %></h2>
-<div class="cards">
-  <div class="card-body">
-    <p><%= @restaurant.address %></p>
-    <p><%= @restaurant.phone_number %></p>
-    <p><%= @restaurant.category %></p>
+  <h2><%= @restaurant.name %></h2>
+  <div class="cards mb-3">
+    <div class="card-body">
+      <p><%= @restaurant.address %></p>
+      <p><%= @restaurant.phone_number %></p>
+      <p><%= @restaurant.category %></p>
+    </div>
   </div>
-</div>
-</div>
-
+ <h4>Reviews:</h4>
+    <ul class="list">
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content%> - <%= review.rating %></li>
+    <% end %>
+    </ul>
+  <h5><%= link_to "Add review", new_restaurant_review_path(@restaurant), class:"btn btn-primary"%></h5>
