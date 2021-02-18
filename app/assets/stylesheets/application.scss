@@ -14,3 +14,14 @@
  *= require_self
  */
  @import "bootstrap/scss/bootstrap";
+
+ .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-body {
+  border-radius: 4px;
+  border-style: solid;
+}
